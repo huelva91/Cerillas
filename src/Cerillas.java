@@ -5,6 +5,8 @@ public class Cerillas {
 
     public static void main(String [] arg){
 
-        System.out.println("Hola mundo");
+        System.out.println("Bienvenido al juego de las cerilas");
+        System.out.println("¿Cuántas cerillas hay en la fila?:");
+
     }
 }
