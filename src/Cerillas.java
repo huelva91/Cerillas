@@ -14,7 +14,8 @@ public class Cerillas {
         System.out.println("Bienvenido al juego de las cerilas");
         System.out.println("¿Cuántas cerillas hay en la fila?:");
         cerillas = entradaEscaner.nextLine();
-        System.out.printf("La entrada recibida es " + cerillas);
+        System.out.println("La entrada recibida es " + cerillas);
+        System.out.println("Estos es una prueba de github");
 
     }
 }
