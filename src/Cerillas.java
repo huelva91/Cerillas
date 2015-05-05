@@ -28,11 +28,14 @@ public class Cerillas {
 
                 System.out.println("¿Cuantas cerillas quieres quitar? M (1,2 o 3)");
                 quitar = entradaEscaner.nextInt();
+                turnoP = true;
 
             }
+
             else {
                 System.out.println("¿Cuantas cerillas quieres quitar? P (1,2 o 3)");
                 quitar = entradaEscaner.nextInt();
+                turnoP = false;
             }
             while (quitar > 3 || quitar < 1) {
 
@@ -42,6 +45,12 @@ public class Cerillas {
             }
             cerillas = cerillas - quitar;
 
+        }
+        if (turnoP == false ){
+            System.out.println("Ha ganado la máquina");
+        }
+        else{
+            System.out.println("Ha ganado la persona");
         }
     }
 }
