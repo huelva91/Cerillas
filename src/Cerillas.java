@@ -23,9 +23,8 @@ public class Cerillas {
 
             System.out.println("Error introduce una cantidad de cerillas a quitar adecuada");
             quitar = entradaEscaner.nextInt();
-
-
         }
+        System.out.println("Quedan..." + cerillas);
 
 
     }
