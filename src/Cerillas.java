@@ -16,15 +16,17 @@ public class Cerillas {
         System.out.println("Bienvenido al juego de las cerilas");
         System.out.println("¿Cuántas cerillas hay en la fila?:");
         cerillas = entradaEscaner.nextInt();
-        System.out.println("La entrada recibida es " + cerillas);
-        System.out.println("¿Cuantas cerillas quieres quitar? (1,2 o 3)");
-        quitar = entradaEscaner.nextInt();
-        while (quitar > 3 || quitar < 1 ){
-
-            System.out.println("Error introduce una cantidad de cerillas a quitar adecuada");
+        while (cerillas != 0) {
+            System.out.println("¿Cuantas cerillas quieres quitar? (1,2 o 3)");
             quitar = entradaEscaner.nextInt();
+            while (quitar > 3 || quitar < 1) {
+
+                System.out.println("Error introduce una cantidad de cerillas a quitar adecuada");
+                quitar = entradaEscaner.nextInt();
+            }
+            System.out.println("Quedan..." + cerillas);
         }
-        System.out.println("Quedan..." + cerillas);
+
 
 
     }
