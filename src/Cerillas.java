@@ -9,6 +9,12 @@ public class Cerillas {
 
     public static void main(String [] arg){
 
+         Juego();
+
+
+    }
+
+    public static void Juego(){
         Scanner entradaEscaner = new Scanner(System.in);
         int cerillas;
         int quitar;
@@ -23,11 +29,9 @@ public class Cerillas {
 
                 System.out.println("Error introduce una cantidad de cerillas a quitar adecuada");
                 quitar = entradaEscaner.nextInt();
+                cerillas = cerillas - quitar;
             }
             System.out.println("Quedan..." + cerillas);
         }
-
-
-
     }
 }
