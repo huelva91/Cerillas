@@ -23,7 +23,15 @@ public class Cerillas {
         System.out.println("¿Cuántas cerillas hay en la fila?:");
         cerillas = entradaEscaner.nextInt();
         while (cerillas > 0) {
-            System.out.println("Quedan..." + cerillas);
+            System.out.println("Hay " + cerillas + " cerillas");
+
+            for (int i=0; i< cerillas; i++)
+            {
+                System.out.print("X");
+            }
+            System.out.println("");
+
+
             if (turnoP == false){
 
                 System.out.println("¿Cuantas cerillas quieres quitar? M (1,2 o 3)");
@@ -37,6 +45,8 @@ public class Cerillas {
                 quitar = entradaEscaner.nextInt();
                 turnoP = false;
             }
+            //System.out.println("Quedan..." + cerillas);
+
             while (quitar > 3 || quitar < 1) {
 
 
