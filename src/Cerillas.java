@@ -17,7 +17,7 @@ public class Cerillas {
     public static void Juego(){
         Scanner entradaEscaner = new Scanner(System.in);
         int cerillas;
-        int quitar;
+        int quitar = 0;
         boolean turnoP = false;
         System.out.println("Bienvenido al juego de las cerilas");
         System.out.println("¿Cuántas cerillas hay en la fila?:");
@@ -53,10 +53,18 @@ public class Cerillas {
                 System.out.println("Error introduce una cantidad de cerillas a quitar adecuada");
                 quitar = entradaEscaner.nextInt();
             }
-            cerillas = cerillas - quitar;
+            if (cerillas >= quitar) {
+                cerillas = cerillas - quitar;
+
+            }
+            else {
+                System.out.println("Quedan..." + cerillas);
+                System.out.println("Has introducido un número mayor a las cerillas restantes");
+
+            }
 
         }
-        System.out.println("Quedan..." + cerillas);
+
 
         if (turnoP == false ){
             System.out.println("Ha ganado la máquina");
