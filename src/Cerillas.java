@@ -25,6 +25,7 @@ public class Cerillas {
         while (cerillas > 0) {
             System.out.println("Hay " + cerillas + " cerillas");
 
+            System.out.print(cerillas+ ": ");
             for (int i=0; i< cerillas; i++)
             {
                 System.out.print("X");
@@ -45,7 +46,6 @@ public class Cerillas {
                 quitar = entradaEscaner.nextInt();
                 turnoP = false;
             }
-            //System.out.println("Quedan..." + cerillas);
 
             while (quitar > 3 || quitar < 1) {
 
@@ -56,6 +56,8 @@ public class Cerillas {
             cerillas = cerillas - quitar;
 
         }
+        System.out.println("Quedan..." + cerillas);
+
         if (turnoP == false ){
             System.out.println("Ha ganado la máquina");
         }
