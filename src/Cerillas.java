@@ -46,26 +46,26 @@ public class Cerillas {
 
 
                 System.out.println("Error introduce una cantidad de cerillas a quitar adecuada");
-                quitar = entradaEscaner.nextInt();
-            }
-            if (cerillas >= quitar) {
-                cerillas = cerillas - quitar;
-
-            }
-            else {
-                System.out.println("Quedan..." + cerillas);
-                System.out.println("Has introducido un número mayor a las cerillas restantes");
-
-            }
-
-        }
-
-
-        if (turnoP == false ){
             System.out.println("Ha ganado la máquina");
         }
         else{
             System.out.println("Ha ganado la persona");
+            quitar = entradaEscaner.nextInt();
+        }
+        if (cerillas >= quitar) {
+            cerillas = cerillas - quitar;
+
+        }
+        else {
+            System.out.println("Quedan..." + cerillas);
+            System.out.println("Has introducido un número mayor a las cerillas restantes");
+
+        }
+
+    }
+
+
+    if (turnoP == false ){
         }
     }
 }
