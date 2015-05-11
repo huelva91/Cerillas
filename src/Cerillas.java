@@ -7,12 +7,7 @@ public class Cerillas {
 
 
 
-    public static void main(String [] arg){
 
-         Juego();
-
-
-    }
 
     public static void Juego(){
         Scanner entradaEscaner = new Scanner(System.in);
