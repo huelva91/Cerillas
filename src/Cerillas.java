@@ -9,7 +9,6 @@ public class Cerillas {
 
     public static void main(String [] arg){
 
-         Juego();
 
 
     }

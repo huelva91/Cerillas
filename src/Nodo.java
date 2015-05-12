@@ -5,7 +5,7 @@ import java.util.ArrayList;
  */
 public class Nodo {
 
-    private Nodo nodo;
+    //private Nodo nodo;
 
 
     public Nodo() {

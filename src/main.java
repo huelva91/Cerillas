@@ -4,8 +4,10 @@
 class main {
 
     public static void main(String[] arg){
-        Cerillas C = new Cerillas();
-        C.Juego();
+        Cerillas c = new Cerillas();
+        Nodo n = new Nodo();
+        c.Juego();
+
 
     }
 }
