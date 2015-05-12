@@ -71,6 +71,7 @@ public class Cerillas {
         }
         else{
             System.out.println("Ha ganado la persona");
+            //
         }
     }
 }
