@@ -48,10 +48,7 @@ public class Cerillas {
                 System.out.println("Error introduce una cantidad de cerillas a quitar adecuada");
             System.out.println("Ha ganado la máquina");
         }
-        else{
-            System.out.println("Ha ganado la persona");
-            quitar = entradaEscaner.nextInt();
-        }
+
         if (cerillas >= quitar) {
             cerillas = cerillas - quitar;
 
@@ -66,6 +63,11 @@ public class Cerillas {
 
 
     if (turnoP == false ){
+        System.out.println("Ha ganado la máquina");
         }
+    else{
+        System.out.println("Ha ganado la persona");
+        quitar = entradaEscaner.nextInt();
+    }
     }
 }
