@@ -1,22 +1,21 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
-/**
- * Created by sergio on 28/04/15.
- */
 public class Cerillas {
 
 
+    static int ALGORITMO = 0;
+    static int VALOR_INICIAL = 2435; //Valor inicial de juego
 
-    public static void main(String [] arg){
+    private static ArrayList<Nodo> hijos = new ArrayList<Nodo>();
+    private static ArrayList<Integer> valoresHeuristicos = new ArrayList<Integer>();
 
-
-
-    }
 
     public static void Juego(){
         Scanner entradaEscaner = new Scanner(System.in);
         int cerillas;
-        int quitar = 0;
+        int quitar;
+
         boolean turnoP = false;
         System.out.println("Bienvenido al juego de las cerilas");
         System.out.println("¿Cuántas cerillas hay en la fila?:");
@@ -71,6 +70,49 @@ public class Cerillas {
         else{
             System.out.println("Ha ganado la persona");
             //
+        }
+    }
+    public static int minimax(Nodo nodo, int prof) {
+        if (nodo.esFinal() || prof == 0){
+            nodo.evaluarNodo();
+            return nodo.getValorHeuristico();
+        }
+        int alpha = -100;
+        ArrayList<Nodo> h = nodo.generarHijos();
+        for (int i = 0; i < h.size(); i++) {
+            h.get(i).evaluarNodo();
+            alpha = Math.max(alpha, -minimax(h.get(i), prof-1));
+        }
+        return alpha;
+    }
+    public static int valorMax(Nodo nodo, int alpha, int beta) {
+        if (nodo.esFinal()) {
+            nodo.evaluarNodo();
+            return nodo.getValorHeuristico();
+        }else{
+            ArrayList<Nodo> h = nodo.generarHijos();
+            for (int i = 0; i < h.size(); i++) {
+                alpha = Math.max(alpha, valorMin(h.get(i), alpha, beta));
+                if (alpha >= beta)
+                    return beta;
+            }
+            return alpha;
+        }
+    }
+
+
+    public static int valorMin(Nodo nodo, int alpha, int beta) {
+        if (nodo.esFinal()) {
+            nodo.evaluarNodo();
+            return nodo.getValorHeuristico();
+        }else{
+            ArrayList<Nodo> h = nodo.generarHijos();
+            for (int i = 0; i < h.size(); i++) {
+                alpha = Math.min(alpha, valorMax(h.get(i), alpha, beta));
+                if (alpha >= beta)
+                    return alpha;
+            }
+            return beta;
         }
     }
 }
